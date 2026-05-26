@@ -52,7 +52,8 @@
             "auxiliaryGdb": false,
             "initCommands": [
                 "set remote verbose-resume-supported-packet off",
-                "set remote verbose-resume-packet off"
+                "set remote verbose-resume-packet off",
+                "set $psp = $PSP",
             ],
             "customResetCommands": [
                 "maintenance packet R00",
