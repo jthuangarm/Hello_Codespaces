@@ -4,6 +4,30 @@
         {
             "label": "CMSIS Load+Run",
             "problemMatcher": [],
+            "dependsOn": [
+                "CMSIS Load",
+                "CMSIS Run"
+            ],
+            "dependsOrder": "sequence"
+        },
+        {
+            "label": "CMSIS Load",
+            "type": "shell",
+            "command": "echo Skipping CMSIS Load: images are loaded by the FVP model when CMSIS Run starts.",
+            "options": {
+                "cwd": "${workspaceFolder}/",
+                "shell": {
+                    "executable": "cmd.exe",
+                    "args": [
+                        "/d",
+                        "/c"
+                    ]
+                }
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "CMSIS Run",
             "type": "shell",
             "command": "FVP_MPS2_Cortex-M3",
             "options": {
@@ -17,12 +41,17 @@
                 }
             },
             "args": [
+                "-D",
+                "--plugin",
+                "./GDBServer.dll",
+                "-C",
+                "GDBServer.port=3333",
                 "-f",
                 "fvp-config.txt",
                 "-a",
-                "out/hello/avh/debug/hello.axf",
-                ""
-            ]
+                "out/hello/avh/debug/hello.axf"
+            ],
+            "problemMatcher": []
         }
     ]
 }
