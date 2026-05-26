@@ -43,7 +43,7 @@
             "args": [
                 "-D",
                 "--plugin",
-                "./GDBServer.dll",
+                "${workspaceFolder}/GDBServer.so",
                 "-C",
                 "GDBServer.port=3333",
                 "-f",

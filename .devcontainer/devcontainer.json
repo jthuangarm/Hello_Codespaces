@@ -3,6 +3,7 @@
         "vscode": {
            "extensions": [
                 "arm.cmsis-csolution",
+                "arm.cmsis-debugger",
                 "arm.environment-manager",
                 "llvm-vs-code-extensions.vscode-clangd"
             ]

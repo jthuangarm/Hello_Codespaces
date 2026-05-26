@@ -11,6 +11,6 @@
     "arm:tools/ninja-build/ninja": "1.13.2",
     "arm:compilers/arm/armclang": "6.24.0",
     "arm:tools/open-cmsis-pack/cmsis-toolbox": "^2.12.0",
-    "arm:models/arm/avh-fvp": "11.30.29"
+    "arm:models/arm/avh-fvp": "11.31.28"
   }
 }
